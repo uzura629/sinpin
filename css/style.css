@@ -1,0 +1,824 @@
+/* 基本変数 */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #f72585;
+    --text-color: #333;
+}
+
+/* 基本スタイル */
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #ffffff;
+    line-height: 1.6;
+    color: var(--text-color);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+/* カウントダウンセクション */
+.countdown-section {
+    text-align: center;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.countdown-section h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transform-origin: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+.highlight {
+    color: #ff4444;
+    font-weight: 800;
+    padding: 0 5px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 20px auto;
+    flex-wrap: nowrap;
+    background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+    border-radius: 15px;
+    padding: 10px;
+    width: 280px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.countdown-item {
+    background: none;
+    padding: 8px 0;
+    width: 25%;
+    margin: 0;
+    border-right: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-item:last-child {
+    border-right: none;
+}
+
+.countdown-item span:first-child {
+    color: #ff4444;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.period {
+    font-size: 0.65em;
+    color: #666;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+/* 画像とビデオの共通スタイル */
+.section-image,
+.video-section {
+    margin: 40px auto;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-image img,
+.video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* キャンペーン詳細セクション */
+.campaign-details {
+    padding: 20px 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.notice-heading {
+    font-size: 1.6em;
+    color: var(--accent-color);
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.offer-main {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.offer-highlight {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.accent-text {
+    color: var(--accent-color);
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.offer-plus {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+/* 受け取り条件 */
+.requirement-box {
+    padding: 20px 15px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.requirement-title {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.steps {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.step {
+    font-size: 1.1em;
+    color: #444;
+    margin: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.step::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* スペシル特典 */
+.special-bonus {
+    padding: 20px 15px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.bonus-label {
+    color: #ff0000;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.2);
+    line-height: 1.4;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transform-origin: center;
+}
+
+.bonus-heading {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+}
+
+.bonus-amount {
+    font-size: 1.3em;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.accent-large {
+    font-size: 1.8em;
+    color: var(--accent-color);
+    font-weight: 800;
+    margin: 0 5px;
+}
+
+/* ボタン */
+.btn-green {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 25px 40px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.btn-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+}
+
+.btn-green .text {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.btn-green .sub-text {
+    display: block;
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+/* ダウンロードリンク */
+.download-links {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 10px;
+}
+
+.download-link {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+}
+
+#watch-notice {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background: rgba(247, 37, 133, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* スマートフォン向け最適化 */
+@media screen and (max-width: 430px) {
+    .bonus-label {
+        font-size: 1.5em;
+        letter-spacing: 0.02em;
+        transform: scale(0.95);
+        width: 130%;
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    section {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    /* 画像とビデオ */
+    .section-image,
+    .video-section {
+        margin: 15px auto;
+        border-radius: 0;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-image img,
+    .video-section iframe {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* テキストとボタン */
+    .notice-heading,
+    .bonus-heading,
+    .requirement-title {
+        font-size: 1.2em;
+        line-height: 1.4;
+        margin: 15px auto;
+    }
+
+    .offer-highlight,
+    .bonus-amount,
+    .step {
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+    .btn-green {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+
+    .btn-green .text {
+        font-size: 1.1em;
+    }
+
+    .btn-green .sub-text {
+        font-size: 0.9em;
+    }
+
+    .download-link {
+        display: block;
+        margin: 10px auto;
+        max-width: 200px;
+    }
+
+    .bonus-label {
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        transform: scale(0.95);
+        width: 120%;
+        margin-left: -10%;
+        margin-right: -10%;
+    }
+
+    .bonus-description {
+        margin: 15px auto;
+    }
+
+    .bonus-number {
+        font-size: 1.2em;
+    }
+
+    .bonus-title {
+        font-size: 1.3em;
+    }
+}
+
+/* 小型スマートフォン向け追加調整 */
+@media screen and (max-width: 375px) {
+    .notice-heading,
+    .bonus-heading,
+    .requirement-title {
+        font-size: 1.1em;
+    }
+
+    .offer-highlight,
+    .bonus-amount,
+    .step {
+        font-size: 1em;
+    }
+
+    .btn-green {
+        padding: 12px;
+    }
+
+    .btn-green .text {
+        font-size: 1em;
+    }
+
+    .bonus-label {
+        font-size: 1.1em;
+        letter-spacing: 0.03em;
+        transform: scale(0.9);
+        width: 130%;
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .bonus-label {
+        font-size: 1em;
+        transform: scale(0.85);
+        width: 140%;
+        margin-left: -20%;
+        margin-right: -20%;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#download-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(-10px);
+}
+
+#download-section.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bonus-description {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.bonus-number {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.bonus-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 5px 0 0;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transform-origin: center;
+}
+
+/* スマートフォン向け最適化 */
+@media screen and (max-width: 430px) {
+    .bonus-title {
+        font-size: 1.3em;
+        letter-spacing: 0.02em;
+        transform: scale(0.95);
+        width: 130%;
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .bonus-title {
+        font-size: 1.2em;
+        letter-spacing: 0.01em;
+        transform: scale(0.9);
+        width: 140%;
+        margin-left: -20%;
+        margin-right: -20%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .bonus-title {
+        font-size: 1.1em;
+        letter-spacing: 0;
+        transform: scale(0.85);
+        width: 150%;
+        margin-left: -25%;
+        margin-right: -25%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .bonus-title {
+        font-size: 1em;
+        transform: scale(0.8);
+        width: 160%;
+        margin-left: -30%;
+        margin-right: -30%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .countdown-section h1 {
+        font-size: 1.4em;
+        letter-spacing: 0.02em;
+        transform: scale(0.95);
+        width: 130%;
+        margin-left: -15%;
+        margin-right: -15%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .countdown-section h1 {
+        font-size: 1.3em;
+        letter-spacing: 0.01em;
+        transform: scale(0.9);
+        width: 140%;
+        margin-left: -20%;
+        margin-right: -20%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .countdown-section h1 {
+        font-size: 1.2em;
+        letter-spacing: 0;
+        transform: scale(0.85);
+        width: 150%;
+        margin-left: -25%;
+        margin-right: -25%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .countdown-section h1 {
+        font-size: 1.1em;
+        transform: scale(0.8);
+        width: 160%;
+        margin-left: -30%;
+        margin-right: -30%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .section-image,
+    .video-section {
+        margin: 15px auto;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* スマートフォン向け最適化 */
+@media screen and (max-width: 430px) {
+    .countdown-section h1,
+    .bonus-label,
+    .bonus-title {
+        font-size: 1.4em;
+        letter-spacing: 0.02em;
+        transform: scale(0.95);
+        width: 140%;
+        margin-left: -20%;
+        margin-right: -20%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .countdown-section h1,
+    .bonus-label,
+    .bonus-title {
+        font-size: 1.3em;
+        letter-spacing: 0.01em;
+        transform: scale(0.9);
+        width: 150%;
+        margin-left: -25%;
+        margin-right: -25%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .countdown-section h1,
+    .bonus-label,
+    .bonus-title {
+        font-size: 1.2em;
+        letter-spacing: 0.01em;
+        transform: scale(0.85);
+        width: 160%;
+        margin-left: -30%;
+        margin-right: -30%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .countdown-section h1,
+    .bonus-label,
+    .bonus-title {
+        font-size: 1.1em;
+        letter-spacing: 0;
+        transform: scale(0.8);
+        width: 170%;
+        margin-left: -35%;
+        margin-right: -35%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .countdown-section h1,
+    .bonus-label,
+    .bonus-title {
+        font-size: 1em;
+        transform: scale(0.75);
+        width: 180%;
+        margin-left: -40%;
+        margin-right: -40%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .campaign-details {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .notice {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .offer-main {
+        padding: 0 15px;
+        margin: 20px auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .offer-highlight {
+        font-size: 1.2em;
+        line-height: 1.4;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    .requirement-box {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .steps {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .special-bonus {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bonus-heading {
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+        word-break: keep-all;
+    }
+
+    .bonus-amount {
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+        word-break: keep-all;
+    }
+
+    .action-guide {
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .action-button {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .btn-green {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 10px;
+    }
+}
+
+.action-button {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-green {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 25px 40px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 430px) {
+    .action-button {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .btn-green {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: none;
+        border-radius: 12px;
+        margin: 0 auto;
+    }
+
+    .btn-green .text {
+        font-size: 1.2em;
+        padding: 0 10px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .btn-green .sub-text {
+        font-size: 1em;
+        padding: 0 10px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+} 
